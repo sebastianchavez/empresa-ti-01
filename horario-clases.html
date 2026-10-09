@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horario de Cursos / Bootcamps | DevForge</title>
+  <meta name="description" content="Conoce los horarios y cursos de programación que ofrecemos. Aprende con los mejores instructores.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], display: ['Poppins', 'system-ui', 'sans-serif'] } } }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="page-loader"><div class="loader-spinner"></div></div>
+  <div id="navbar-mount"></div>
+
+  <!-- Hero -->
+  <section class="hero-img pt-32 pb-16 relative">
+    <div class="glow-blob glow-blob-1"></div>
+    <div class="glow-blob glow-blob-2"></div>
+    <div class="max-w-7xl mx-auto px-4 lg:px-8 relative z-10 text-center">
+      <div class="reveal">
+        <span class="text-indigo-400 text-sm uppercase tracking-widest font-semibold">Bootcamps & Cursos</span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold mt-3 mb-6">
+          Aprende con los <span class="gradient-text">mejores</span>
+        </h1>
+        <p class="text-lg text-slate-300 max-w-3xl mx-auto">
+          Cursos de programación diseñados para llevarte desde cero hasta nivel profesional. Modalidad online y presencial.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filtros -->
+  <section class="py-8">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="flex flex-wrap justify-center gap-3 reveal" id="filtros-niveles"></div>
+    </div>
+  </section>
+
+  <!-- Cursos Cards -->
+  <section class="py-8 bg-hex">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="cursos-grid"></div>
+    </div>
+  </section>
+
+  <!-- Tabla de horarios -->
+  <section class="py-20 bg-binary border-y border-indigo-500/10">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <span class="text-indigo-400 text-sm uppercase tracking-widest font-semibold">Cronograma Semanal</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-4">
+          Horario de <span class="gradient-text">clases</span>
+        </h2>
+        <p class="text-slate-400">Consulta los horarios disponibles por día y modalidad.</p>
+      </div>
+      <div class="overflow-x-auto reveal">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Día</th>
+              <th>Horario</th>
+              <th>Curso</th>
+              <th>Modalidad</th>
+            </tr>
+          </thead>
+          <tbody id="schedule-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <span class="text-indigo-400 text-sm uppercase tracking-widest font-semibold">¿Por qué estudiar con nosotros?</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-4">
+          Una experiencia <span class="gradient-text">única</span>
+        </h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="glass rounded-2xl p-6 text-center card-hover reveal-scale">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
+          </div>
+          <h3 class="font-bold text-white mb-2">Instructores Expertos</h3>
+          <p class="text-slate-400 text-sm">Aprende de profesionales activos en la industria.</p>
+        </div>
+        <div class="glass rounded-2xl p-6 text-center card-hover reveal-scale delay-200">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+          </div>
+          <h3 class="font-bold text-white mb-2">Certificación Oficial</h3>
+          <p class="text-slate-400 text-sm">Recibe un diploma con validez curricular al finalizar.</p>
+        </div>
+        <div class="glass rounded-2xl p-6 text-center card-hover reveal-scale delay-300">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.679 2.72c.194.49.535.908.967 1.2M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+          </div>
+          <h3 class="font-bold text-white mb-2">Comunidad Activa</h3>
+          <p class="text-slate-400 text-sm">Acceso a grupos de estudio y mentorías continuas.</p>
+        </div>
+        <div class="glass rounded-2xl p-6 text-center card-hover reveal-scale delay-400">
+          <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.25 2.25 0 0 0 1.872-2.18V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.106-.403.196-.624.275a48.4 48.4 0 0 1-8.516.667c-2.985 0-5.86-.243-8.516-.667a6.07 6.07 0 0 1-.624-.275m4.5-8.006A48.142 48.142 0 0 1 12 6.337c2.985 0 5.86.243 8.516.667m0 0a48.4 48.4 0 0 1 .624.275M3.75 7.794c-.194.106-.403.196-.624.275m0 0a48.142 48.142 0 0 0-3.063.51A2.25 2.25 0 0 0 .001 10.811v5.387c0 .962.605 1.737 1.434 2.026a48.43 48.43 0 0 0 1.315.36m16.5-1.296a2.25 2.25 0 0 0 1.314-2.026V10.81a2.25 2.25 0 0 0-1.063-1.95 48.4 48.4 0 0 0-3.063-.51"/></svg>
+          </div>
+          <h3 class="font-bold text-white mb-2">Bolsa de Trabajo</h3>
+          <p class="text-slate-400 text-sm">Acceso a oportunidades laborales en empresas líderes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-mount"></div>
+  <div id="scroll-top-mount"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/horario.js"></script>
+</body>
+</html>

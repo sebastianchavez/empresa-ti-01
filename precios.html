@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precios | DevForge</title>
+  <meta name="description" content="Planes y precios transparentes para empresas de todos los tamaños.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'], display: ['Poppins', 'system-ui', 'sans-serif'] } } }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="page-loader"><div class="loader-spinner"></div></div>
+  <div id="navbar-mount"></div>
+
+  <!-- Hero -->
+  <section class="hero-img pt-32 pb-20 relative">
+    <div class="glow-blob glow-blob-1"></div>
+    <div class="glow-blob glow-blob-2"></div>
+    <div class="max-w-7xl mx-auto px-4 lg:px-8 relative z-10 text-center">
+      <div class="reveal">
+        <span class="text-indigo-400 text-sm uppercase tracking-widest font-semibold">Precios</span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold mt-3 mb-6">
+          Planes <span class="gradient-text">transparentes</span><br>y sin sorpresas
+        </h1>
+        <p class="text-lg text-slate-300 max-w-3xl mx-auto">
+          Elige el plan que mejor se adapte a tus necesidades. Sin permanencia, sin costos ocultos.
+        </p>
+      </div>
+      <!-- Toggle anual/mensual -->
+      <div class="flex items-center justify-center gap-4 mt-8 reveal">
+        <span class="text-slate-300" id="label-mensual">Mensual</span>
+        <button id="toggle-billing" class="relative w-14 h-7 rounded-full bg-slate-700 transition-colors" aria-label="Cambiar facturación">
+          <span class="absolute top-1 left-1 w-5 h-5 rounded-full bg-white transition-transform" id="toggle-dot"></span>
+        </button>
+        <span class="text-slate-300" id="label-anual">Anual <span class="text-emerald-400 text-sm font-bold">-20%</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planes -->
+  <section class="py-20 bg-dots">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-6 lg:gap-8 items-start" id="planes-grid"></div>
+    </div>
+  </section>
+
+  <!-- Tabla comparativa -->
+  <section class="py-20 bg-circuit border-y border-indigo-500/10">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <span class="text-indigo-400 text-sm uppercase tracking-widest font-semibold">Comparativa</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-4">
+          Compara nuestros <span class="gradient-text">planes</span>
+        </h2>
+      </div>
+      <div class="overflow-x-auto reveal">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Característica</th>
+              <th>Emprendedor</th>
+              <th>Profesional</th>
+              <th>Empresarial</th>
+            </tr>
+          </thead>
+          <tbody id="comparativa-tabla"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios adicionales -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <span class="text-indigo-400 text-sm uppercase tracking-widest font-semibold">Servicios Adicionales</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-4">
+          Complementa tu <span class="gradient-text">plan</span>
+        </h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="servicios-ad-grid"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 bg-slate-950/40 border-y border-indigo-500/10">
+    <div class="max-w-4xl mx-auto px-4 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <span class="text-indigo-400 text-sm uppercase tracking-widest font-semibold">Preguntas Frecuentes</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mt-3 mb-4">
+          Resolvemos tus <span class="gradient-text">dudas</span>
+        </h2>
+      </div>
+      <div class="glass rounded-2xl p-2 reveal" id="faq-container"></div>
+    </div>
+  </section>
+
+  <div id="footer-mount"></div>
+  <div id="scroll-top-mount"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/precios.js"></script>
+</body>
+</html>

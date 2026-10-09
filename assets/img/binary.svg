@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="binary" width="180" height="180" patternUnits="userSpaceOnUse">
+      <g fill="#818cf8" fill-opacity="0.65" font-family="monospace" font-size="16" font-weight="bold">
+        <text x="5" y="20">10110</text>
+        <text x="50" y="50">01101</text>
+        <text x="100" y="35">11001</text>
+        <text x="10" y="80">00110</text>
+        <text x="80" y="95">10101</text>
+        <text x="30" y="120">01010</text>
+        <text x="110" y="115">11010</text>
+        <text x="60" y="155">01110</text>
+        <text x="130" y="145">10110</text>
+        <text x="20" y="170">10011</text>
+      </g>
+      <g fill="#c084fc" fill-opacity="0.8" font-family="monospace" font-size="22" font-weight="bold">
+        <text x="140" y="20">1</text>
+        <text x="160" y="80">0</text>
+        <text x="0" y="50">1</text>
+        <text x="155" y="125">1</text>
+        <text x="0" y="140">0</text>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="300" height="300" fill="url(#binary)"/>
+</svg>

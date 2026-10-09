@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="screen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f0f23"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="code-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="50%" stop-color="#67e8f9"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="300" cy="480" rx="240" ry="14" fill="#000" opacity="0.35"/>
+
+  <rect x="100" y="100" width="400" height="260" rx="10" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  <rect x="110" y="80" width="380" height="30" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <circle cx="130" cy="95" r="5" fill="#ef4444"/>
+  <circle cx="150" cy="95" r="5" fill="#f59e0b"/>
+  <circle cx="170" cy="95" r="5" fill="#10b981"/>
+  <rect x="200" y="89" width="200" height="12" rx="6" fill="#1e293b"/>
+
+  <rect x="100" y="100" width="400" height="260" rx="10" fill="url(#screen)"/>
+
+  <g transform="translate(120, 125)" font-family="monospace" font-size="14">
+    <text fill="#94a3b8"><tspan x="0" y="0">1</tspan></text>
+    <text fill="#94a3b8"><tspan x="0" y="22">2</tspan></text>
+    <text fill="#94a3b8"><tspan x="0" y="44">3</tspan></text>
+    <text fill="#94a3b8"><tspan x="0" y="66">4</tspan></text>
+    <text fill="#94a3b8"><tspan x="0" y="88">5</tspan></text>
+    <text fill="#94a3b8"><tspan x="0" y="110">6</tspan></text>
+    <text fill="#94a3b8"><tspan x="0" y="132">7</tspan></text>
+    <text fill="#94a3b8"><tspan x="0" y="154">8</tspan></text>
+    <text fill="#94a3b8"><tspan x="0" y="176">9</tspan></text>
+    <text fill="#94a3b8"><tspan x="0" y="198">10</tspan></text>
+
+    <text fill="#c084fc" font-weight="bold"><tspan x="25" y="0">const</tspan></text>
+    <text fill="#67e8f9"><tspan x="85" y="0">app</tspan></text>
+    <text fill="#e2e8f0"><tspan x="125" y="0">= {</tspan></text>
+
+    <text fill="#67e8f9"><tspan x="45" y="22">name</tspan></text>
+    <text fill="#e2e8f0"><tspan x="100" y="22">:</tspan></text>
+    <text fill="#fbbf24"><tspan x="115" y="22">'DevForge'</tspan></text>
+    <text fill="#e2e8f0"><tspan x="220" y="22">,</tspan></text>
+
+    <text fill="#67e8f9"><tspan x="45" y="44">version</tspan></text>
+    <text fill="#e2e8f0"><tspan x="120" y="44">:</tspan></text>
+    <text fill="#a78bfa"><tspan x="135" y="44">2.0</tspan></text>
+    <text fill="#e2e8f0"><tspan x="175" y="44">,</tspan></text>
+
+    <text fill="#67e8f9"><tspan x="45" y="66">stack</tspan></text>
+    <text fill="#e2e8f0"><tspan x="105" y="66">: [</tspan></text>
+    <text fill="#fbbf24"><tspan x="140" y="66">'React'</tspan></text>
+    <text fill="#e2e8f0"><tspan x="210" y="66">,</tspan></text>
+
+    <text fill="#fbbf24"><tspan x="155" y="88">'Node'</tspan></text>
+    <text fill="#e2e8f0"><tspan x="220" y="88">,</tspan></text>
+
+    <text fill="#fbbf24"><tspan x="155" y="110">'Cloud'</tspan></text>
+    <text fill="#e2e8f0"><tspan x="230" y="110">],</tspan></text>
+
+    <text fill="#67e8f9"><tspan x="45" y="132">deploy</tspan></text>
+    <text fill="#e2e8f0"><tspan x="115" y="132">: () =&gt; {</tspan></text>
+
+    <text fill="#c084fc" font-weight="bold"><tspan x="65" y="154">return</tspan></text>
+    <text fill="#10b981"><tspan x="125" y="154">'🚀 Live'</tspan></text>
+    <text fill="#e2e8f0"><tspan x="200" y="154">;</tspan></text>
+
+    <text fill="#e2e8f0"><tspan x="45" y="176">}</tspan></text>
+    <text fill="#e2e8f0"><tspan x="25" y="198">}</tspan></text>
+  </g>
+
+  <rect x="100" y="360" width="400" height="10" fill="#475569" rx="2"/>
+  <rect x="280" y="370" width="40" height="80" fill="#334155"/>
+  <rect x="240" y="445" width="120" height="10" rx="3" fill="#1e293b"/>
+
+  <g opacity="0.6">
+    <circle cx="60" cy="80" r="3" fill="#67e8f9"/>
+    <circle cx="540" cy="120" r="3" fill="#a78bfa"/>
+    <circle cx="80" cy="280" r="2" fill="#f0abfc"/>
+    <circle cx="520" cy="320" r="3" fill="#67e8f9"/>
+    <circle cx="40" cy="200" r="2" fill="#c084fc"/>
+    <circle cx="560" cy="60" r="2" fill="#a78bfa"/>
+  </g>
+</svg>

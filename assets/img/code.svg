@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="code" width="150" height="150" patternUnits="userSpaceOnUse">
+      <g fill="#818cf8" fill-opacity="0.7" font-family="monospace" font-size="28" font-weight="bold">
+        <text x="10" y="30">{ }</text>
+        <text x="80" y="70">&lt;/&gt;</text>
+        <text x="20" y="110">[ ]</text>
+        <text x="100" y="140">( )</text>
+      </g>
+      <g stroke="#c084fc" stroke-opacity="0.7" stroke-width="2" fill="none">
+        <path d="M 0 60 L 30 60"/>
+        <path d="M 110 90 L 140 90"/>
+        <path d="M 0 130 L 25 130"/>
+        <path d="M 70 0 L 70 25"/>
+        <path d="M 50 80 L 50 110"/>
+      </g>
+      <g fill="#67e8f9" fill-opacity="0.85">
+        <circle cx="30" cy="60" r="3"/>
+        <circle cx="110" cy="90" r="3"/>
+        <circle cx="50" cy="110" r="3"/>
+        <circle cx="70" cy="25" r="3"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="300" height="300" fill="url(#code)"/>
+</svg>
