@@ -18,6 +18,7 @@
     if (!btn) return;
     btn.addEventListener("click", () => {
       anual = !anual;
+      btn.setAttribute("aria-pressed", String(anual));
       if (anual) {
         btn.classList.add("bg-indigo-500");
         btn.classList.remove("bg-slate-700");
@@ -32,8 +33,8 @@
   }
 
   function calcPrecio(precio) {
-    if (anual) return Math.round(precio * 12 * 0.8).toLocaleString("es-MX");
-    return precio.toLocaleString("es-MX");
+    if (anual) return Math.round(precio * 12 * 0.8).toLocaleString("es-CL");
+    return precio.toLocaleString("es-CL");
   }
 
   function renderPlanes() {
@@ -47,9 +48,9 @@
         <div class="mb-6">
           <div class="flex items-baseline gap-1">
             <span class="text-slate-400 text-lg">$</span>
-            <span class="font-display text-5xl font-bold gradient-text">${calcPrecio(p.precio)}</span>
+            <span class="price-amount font-display font-bold gradient-text">${calcPrecio(p.precio)}</span>
           </div>
-          <p class="text-slate-400 text-sm">${anual ? 'total al año' : 'por mes'}</p>
+          <p class="text-slate-400 text-sm">CLP · ${anual ? 'total al año' : 'por mes'}</p>
         </div>
         <ul class="space-y-3 mb-8">
           ${p.caracteristicas.slice(0, 8).map(c => `
@@ -95,7 +96,7 @@
     const grid = document.getElementById("servicios-ad-grid");
     if (!grid) return;
     grid.innerHTML = APP_DATA.serviciosAdicionales.map((s, i) => `
-      <div class="glass rounded-xl p-5 flex items-center justify-between card-hover reveal-scale delay-${(i + 1) * 100}">
+      <div class="additional-service glass rounded-xl p-5 flex card-hover reveal-scale delay-${(i + 1) * 100}">
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white">
             ${ICONS.code}

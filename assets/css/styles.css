@@ -90,7 +90,7 @@ body {
 }
 .reveal-left {
   opacity: 0;
-  transform: translateX(-40px);
+  transform: translateX(-16px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 .reveal-left.revealed {
@@ -99,7 +99,7 @@ body {
 }
 .reveal-right {
   opacity: 0;
-  transform: translateX(40px);
+  transform: translateX(16px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 .reveal-right.revealed {
@@ -371,44 +371,73 @@ body {
    HAMBURGER MENU
    ===================================================== */
 .hamburger {
-  width: 28px;
-  height: 22px;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
   position: relative;
   cursor: pointer;
 }
 .hamburger span {
   position: absolute;
   height: 2px;
-  width: 100%;
+  width: 26px;
+  left: 9px;
   background: #e2e8f0;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
-.hamburger span:nth-child(1) { top: 0; }
-.hamburger span:nth-child(2) { top: 10px; }
-.hamburger span:nth-child(3) { top: 20px; }
+.hamburger span:nth-child(1) { top: 13px; }
+.hamburger span:nth-child(2) { top: 21px; }
+.hamburger span:nth-child(3) { top: 29px; }
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg);
-  top: 10px;
+  top: 21px;
 }
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg);
-  top: 10px;
+  top: 21px;
 }
 
 /* =====================================================
    MOBILE MENU
    ===================================================== */
 .mobile-menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
+  display: none;
 }
-.mobile-menu.open {
-  max-height: 600px;
+@media (max-width: 1023px) {
+  .navbar, .navbar.scrolled {
+    background: #0f1023;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+  }
+  .navbar.menu-open {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  }
+  .mobile-menu.open {
+    display: block;
+    max-height: calc(100vh - 76px);
+    max-height: calc(100dvh - 76px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .mobile-menu .nav-link {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+  }
+  .mobile-menu .nav-link.active {
+    background: rgba(99, 102, 241, 0.15);
+    color: #c7d2fe;
+  }
+  .mobile-menu .nav-link::after {
+    display: none;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid #a5b4fc;
+  outline-offset: 4px;
 }
 
 /* =====================================================
@@ -974,6 +1003,59 @@ body {
 /* =====================================================
    RESPONSIVE FINE TUNING
    ===================================================== */
+.grid > *, .flex > * {
+  min-width: 0;
+}
+.footer a, #info-email, .legal-content a {
+  overflow-wrap: anywhere;
+}
+.price-amount {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  white-space: nowrap;
+}
+.additional-service {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.additional-service > div > div {
+  flex-shrink: 0;
+}
+.schedule-table {
+  min-width: 620px;
+}
+@media (max-width: 639px) {
+  .hero-img {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+  }
+  h1.font-display {
+    font-size: clamp(1.75rem, 7.6vw, 2.5rem);
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+  h2.font-display {
+    font-size: clamp(1.5rem, 6.5vw, 2rem);
+  }
+  .hero-img p.text-lg {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+  section.py-20 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .price-card {
+    padding: 1.5rem;
+  }
+  #horarios-list li {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .reveal-left, .reveal-right {
+    transform: translateY(24px);
+  }
+}
 @media (max-width: 768px) {
   .timeline {
     padding-left: 2.5rem;

@@ -92,7 +92,7 @@
               const progress = Math.min((now - start) / duration, 1);
               const eased = 1 - Math.pow(1 - progress, 3);
               const value = Math.floor(eased * target);
-              el.textContent = value.toLocaleString("es-MX") + suffix;
+              el.textContent = value.toLocaleString("es-CL") + suffix;
               if (progress < 1) requestAnimationFrame(tick);
             }
             requestAnimationFrame(tick);

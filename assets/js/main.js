@@ -84,17 +84,39 @@
     });
 
     if (hamburger && mobileMenu) {
+      const setMenuOpen = (open) => {
+        hamburger.classList.toggle("active", open);
+        mobileMenu.classList.toggle("open", open);
+        navbar.classList.toggle("menu-open", open);
+        hamburger.setAttribute("aria-expanded", String(open));
+        hamburger.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+        mobileMenu.inert = !open;
+      };
+      setMenuOpen(false);
       hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        mobileMenu.classList.toggle("open");
+        setMenuOpen(!mobileMenu.classList.contains("open"));
       });
 
-      $$(".mobile-menu .nav-link", navbar).forEach((link) => {
+      $$(".mobile-menu a", navbar).forEach((link) => {
         link.addEventListener("click", () => {
-          hamburger.classList.remove("active");
-          mobileMenu.classList.remove("open");
+          setMenuOpen(false);
         });
       });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && mobileMenu.classList.contains("open")) {
+          setMenuOpen(false);
+          hamburger.focus();
+        }
+      });
+      document.addEventListener("click", (event) => {
+        if (!navbar.contains(event.target)) setMenuOpen(false);
+      });
+      navbar.addEventListener("focusout", () => {
+        requestAnimationFrame(() => {
+          if (!navbar.contains(document.activeElement)) setMenuOpen(false);
+        });
+      });
+      window.matchMedia("(min-width: 1024px)").addEventListener("change", () => setMenuOpen(false));
     }
   }
 
@@ -131,7 +153,7 @@
               const progress = Math.min((now - start) / duration, 1);
               const eased = 1 - Math.pow(1 - progress, 3);
               const value = Math.floor(eased * target);
-              el.textContent = value.toLocaleString("es-MX") + suffix;
+              el.textContent = value.toLocaleString("es-CL") + suffix;
               if (progress < 1) requestAnimationFrame(tick);
             }
             requestAnimationFrame(tick);
@@ -253,11 +275,11 @@
             <a href="contacto.html" class="hidden lg:inline-block px-5 py-2.5 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold btn-glow">
               Cotizar Proyecto
             </a>
-            <button class="hamburger lg:hidden" aria-label="Abrir menú">
+            <button class="hamburger lg:hidden" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-navigation">
               <span></span><span></span><span></span>
             </button>
           </div>
-          <div class="mobile-menu lg:hidden">
+          <div id="mobile-navigation" class="mobile-menu lg:hidden" inert>
             <div class="pt-4 mt-4 border-t border-indigo-500/20 flex flex-col gap-3 pb-4">
               <a class="nav-link text-slate-200 hover:text-white py-2" href="index.html">Inicio</a>
               <a class="nav-link text-slate-200 hover:text-white py-2" href="nosotros.html">Nosotros</a>
@@ -332,7 +354,7 @@
             </div>
             <div class="mt-10 pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
               <p class="text-slate-500 text-sm">© 2026 ${APP_DATA.empresa.nombre}. Todos los derechos reservados.</p>
-              <p class="text-slate-500 text-sm">Hecho con <span class="text-red-500">♥</span> en México</p>
+              <p class="text-slate-500 text-sm">Hecho con <span class="text-red-500">♥</span> en Chile</p>
             </div>
           </div>
         </footer>

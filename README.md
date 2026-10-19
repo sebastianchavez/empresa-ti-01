@@ -115,3 +115,9 @@ La plantilla es 100% estática y puede desplegarse en cualquier hosting de archi
 ## Licencia
 
 Plantilla de uso libre para proyectos comerciales y personales. Se agradece la atribución a DevForge como plantilla original.
+
+## Configuración para Chile
+
+Los precios de ejemplo se expresan en pesos chilenos (CLP), con separador de miles chileno. Los planes son $149.900, $349.900 y $799.900 al mes; la facturación anual aplica 20% de descuento al total de 12 meses. Son valores comerciales de muestra, no una conversión de divisas.
+
+El teléfono +56, los correos .cl y la ubicación en Providencia, Santiago son datos de demostración: reemplázalos por los reales antes de publicar. El mapa muestra el sector de referencia, no una oficina específica. Los horarios usan America/Santiago. Revisa y adapta los textos legales a tu empresa antes de publicar.

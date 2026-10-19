@@ -7,10 +7,10 @@ const APP_DATA = {
     nombre: "DevForge",
     tagline: "Construimos el software del futuro",
     descripcionCorta: "Empresa líder en desarrollo de software con más de una década transformando ideas en soluciones digitales de alto impacto.",
-    email: "contacto@devforge.com",
-    telefono: "+52 55 1234 5678",
-    whatsapp: "+52 55 8765 4321",
-    direccion: "Av. Reforma 1234, Col. Centro, CDMX, México",
+    email: "contacto@devforge.cl",
+    telefono: "+56 9 1234 5678",
+    whatsapp: "+56 9 1234 5678",
+    direccion: "Providencia, Santiago, Chile",
     horarios: [
       { dia: "Lunes a Viernes", horario: "09:00 - 18:00" },
       { dia: "Sábado", horario: "10:00 - 14:00" },
@@ -260,7 +260,7 @@ const APP_DATA = {
     {
       id: "basico",
       nombre: "Emprendedor",
-      precio: 1499,
+      precio: 149900,
       periodo: "mes",
       descripcion: "Ideal para negocios que necesitan presencia digital profesional.",
       popular: false,
@@ -280,7 +280,7 @@ const APP_DATA = {
     {
       id: "profesional",
       nombre: "Profesional",
-      precio: 3499,
+      precio: 349900,
       periodo: "mes",
       descripcion: "Para empresas en crecimiento que buscan escalar su transformación digital.",
       popular: true,
@@ -300,7 +300,7 @@ const APP_DATA = {
     {
       id: "empresarial",
       nombre: "Empresarial",
-      precio: 7999,
+      precio: 799900,
       periodo: "mes",
       descripcion: "Solución completa para empresas que necesitan máximo rendimiento.",
       popular: false,
@@ -320,12 +320,12 @@ const APP_DATA = {
   ],
 
   serviciosAdicionales: [
-    { nombre: "Diseño UX/UI adicional", precio: "$800 USD" },
-    { nombre: "Optimización SEO", precio: "Desde $300 USD/mes" },
-    { nombre: "Marketing Digital", precio: "Desde $500 USD/mes" },
-    { nombre: "Mantenimiento por hora", precio: "$50 USD/hora" },
-    { nombre: "Capacitación de equipo", precio: "$40 USD/hora" },
-    { nombre: "Auditoría de seguridad", precio: "Desde $1,200 USD" }
+    { nombre: "Diseño UX/UI adicional", precio: "$800.000 CLP" },
+    { nombre: "Optimización SEO", precio: "Desde $300.000 CLP/mes" },
+    { nombre: "Marketing Digital", precio: "Desde $500.000 CLP/mes" },
+    { nombre: "Mantenimiento por hora", precio: "$50.000 CLP/hora" },
+    { nombre: "Capacitación de equipo", precio: "$40.000 CLP/hora" },
+    { nombre: "Auditoría de seguridad", precio: "Desde $1.200.000 CLP" }
   ],
 
   cursos: [
@@ -336,7 +336,7 @@ const APP_DATA = {
       nivel: "todos",
       duracion: "16 semanas",
       modalidad: ["online", "presencial"],
-      precio: "$450 USD",
+      precio: "$450.000 CLP",
       instructor: "Luis Torres"
     },
     {
@@ -346,7 +346,7 @@ const APP_DATA = {
       nivel: "todos",
       duracion: "14 semanas",
       modalidad: ["online", "presencial"],
-      precio: "$500 USD",
+      precio: "$500.000 CLP",
       instructor: "Carlos Méndez"
     },
     {
@@ -356,7 +356,7 @@ const APP_DATA = {
       nivel: "intermedio",
       duracion: "20 semanas",
       modalidad: ["online"],
-      precio: "$650 USD",
+      precio: "$650.000 CLP",
       instructor: "Ana Rodríguez"
     },
     {
@@ -366,7 +366,7 @@ const APP_DATA = {
       nivel: "intermedio",
       duracion: "12 semanas",
       modalidad: ["online", "presencial"],
-      precio: "$550 USD",
+      precio: "$550.000 CLP",
       instructor: "Diego Ramírez"
     },
     {
@@ -376,7 +376,7 @@ const APP_DATA = {
       nivel: "avanzado",
       duracion: "10 semanas",
       modalidad: ["online"],
-      precio: "$700 USD",
+      precio: "$700.000 CLP",
       instructor: "Diego Ramírez"
     },
     {
@@ -386,7 +386,7 @@ const APP_DATA = {
       nivel: "intermedio",
       duracion: "18 semanas",
       modalidad: ["online", "presencial"],
-      precio: "$750 USD",
+      precio: "$750.000 CLP",
       instructor: "Ana Rodríguez"
     },
     {
@@ -396,7 +396,7 @@ const APP_DATA = {
       nivel: "basico",
       duracion: "8 semanas",
       modalidad: ["online", "presencial"],
-      precio: "$250 USD",
+      precio: "$250.000 CLP",
       instructor: "Luis Torres"
     },
     {
@@ -406,7 +406,7 @@ const APP_DATA = {
       nivel: "avanzado",
       duracion: "14 semanas",
       modalidad: ["online"],
-      precio: "$800 USD",
+      precio: "$800.000 CLP",
       instructor: "Carlos Méndez"
     }
   ],
@@ -457,7 +457,7 @@ const APP_DATA = {
       respuesta: "Sí, todos nuestros planes incluyen soporte post-entrega. Ofrecemos planes mensuales, trimestrales o anuales según tus necesidades."
     },
     {
-      pregunta: "¿Trabajan con clientes fuera de México?",
+      pregunta: "¿Trabajan con clientes fuera de Chile?",
       respuesta: "Por supuesto. Trabajamos con clientes en más de 25 países. Utilizamos herramientas colaborativas para mantener una comunicación fluida sin importar la zona horaria."
     },
     {
